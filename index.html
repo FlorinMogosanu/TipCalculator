@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/iconmonstr-file-3-32.png">
+  
+  <!-- Font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="main__title">
+      Spli<br>tter
+    </h1>
+
+    <form>
+      <div class="tip-calculator">
+        <div class="input-data">
+          <div class="bill">
+            <div class="flex">
+              <p class="bill-input__label">Bill</p>
+              <p class="error" id="bill-error"></p>
+            </div>
+            <div class="bill-form">
+              <label for="bill" class="flex-label"><img src="./images/icon-dollar.svg"></label>
+              <input id="bill" type="text" placeholder="0" autocomplete="off">
+            </div>
+          </div>
+          <div class="tip-selector">
+            <div class="flex">
+              <p class="tip-selector__label">Select Tip %</p>
+              <p class="error" id="tip-error"></p>
+            </div>
+            <div class="grid">
+              <input type="button" value="5%" id="five" class="tip__part tip__btn" data-percent="5">
+              <input type="button" value="10%" id="ten" class="tip__part tip__btn" data-percent="10">
+              <input type="button" value="15%" id="fifteen" class="tip__part tip__btn" data-percent="15">
+              <input type="button" value="25%" id="twenty-five" class="tip__part tip__btn" data-percent="25">
+              <input type="button" value="50%" id="fifty" class="tip__part tip__btn" data-percent="50">
+              <input type="text" id="custom" class="tip__part tip__input" placeholder="Custom">
+            </div>
+          </div>
+          <div class="people-selector">
+            <div class="flex">
+              <p class="people__label">Number of People</p>
+              <p class="error" id="pople-error"></p>
+            </div>
+            <div class="people-form">
+              <input type="text" id="people" placeholder="0">
+              <label for="people" class="flex-label"><img src="./images/icon-person.svg"></label>
+            </div>
+          </div>
+        </div>
+        <div class="output-data">
+          <div>
+            <div class="amount tip-amount">
+              <div>
+                <h2>Tip Amount</h2>
+                <p>/ person</p>
+              </div>
+              <h3 id="tipPerPerson">$0.00</h3>
+            </div>
+            <div class="amount total">
+              <div>
+                <h2>Total</h2>
+                <p>/ person</p>
+              </div>
+              <h3 id="billPerPerson">$0.00</h3>
+            </div>
+          </div>
+          <input type="submit" id="reset" value="Reset">
+        </div>
+      </div>
+    </form>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Florin Mogosanu</a>.
+  </div>
+</body>
+</html>
